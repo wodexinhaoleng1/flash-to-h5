@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>绘玩创·思维游戏第1级（纯H5版）</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="stage-wrap">
+      <div id="stage-container">
+        <svg id="ui-stage" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
+        <svg id="lesson-stage" class="hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
+        <div id="video-overlay" class="hidden">
+          <video id="intro-video" playsinline preload="none"></video>
+          <button id="skip-intro-btn" type="button">跳过片头</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 快捷导航与调试栏（可折叠，不遮挡原生UI） -->
+    <div id="hud-bar">
+      <button id="hud-home-btn" title="返回主页">主页</button>
+      <button id="hud-back-btn" title="返回上一级" class="hidden">返回</button>
+      <select id="hud-lesson-select" title="快速跳转课时"></select>
+      <button id="hud-bgm-btn" title="背景音乐开关">音乐: 关</button>
+      <button id="hud-fullscreen-btn" title="全屏切换">全屏</button>
+      <span id="hud-status">加载中...</span>
+    </div>
+  </div>
+
+  <script src="js/renderer.js"></script>
+  <script src="js/as3-runtime.js"></script>
+  <script src="js/game-engine.js"></script>
+  <script src="js/launcher.js"></script>
+</body>
+</html>
